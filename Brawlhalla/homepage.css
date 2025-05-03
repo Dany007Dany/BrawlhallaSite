@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #000;
+    background-color: #fff;
     color: #fff;
 }
 
@@ -9,19 +9,22 @@ body {
 .video-container {
     position: relative;
     width: 100%;
-    min-height: 100vh;
+    height: 100vh;
     overflow: hidden;
 }
 
 video {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: auto;
-    display: block;
+    height: 100%;
+    object-fit: cover;
 }
 
-.overlay-image {
+.video-container__overlay-image {
     position: absolute;
-    top: 10%;
+    top: 25%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 600px;
@@ -29,20 +32,20 @@ video {
     pointer-events: none;
 }
 
-.home-button {
+.video-container__home-button {
     position: fixed;
-    top: 20px;
+    top: 18px;
     left: 20px;
     width: 150px;
     z-index: 1000;
 }
 
-.home-button img {
+.video-container__home-button img {
     width: 100%;
     transition: transform 0.3s ease;
 }
 
-.home-button:hover img {
+.video-container__home-button:hover img {
     transform: scale(0.85);
     cursor: pointer;
 }
@@ -50,8 +53,9 @@ video {
 /* Sezione info */
 .info-section {
     padding: 60px 20px;
-    background-color: #fff;
+    background-color: rgb(240, 240, 240);
     color: #000;
+    font-family: 'Bebas Neue', Arial, sans-serif;
 }
 
 .info-section h2 {
@@ -59,10 +63,12 @@ video {
     margin-bottom: 40px;
     font-size: 32px;
     color: #007acc;
+    font-family: 'Bebas Neue', Arial, sans-serif;
+    letter-spacing: 1px;
 }
 
 /* Blocco per ogni sezione testo+immagine */
-.info-block {
+.info-section__info-block {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -74,7 +80,7 @@ video {
 
 
 /* Testo nella sezione informativa */
-.info-text {
+.info-section__info-text {
     flex: 1 1 300px;
     max-width: 600px;
     font-size: 18px;
@@ -83,13 +89,13 @@ video {
 }
 
 /* Immagine nella sezione informativa */
-.info-image {
+.info-section__info-image {
     flex: 1 1 300px;
     max-width: 500px;
     text-align: center;
 }
 
-.info-image img {
+.info-section__info-image img {
     width: 100%;
     height: auto;
     border-radius: 10px;
@@ -103,7 +109,7 @@ footer {
     text-align: center;
     padding: 20px;
     font-size: 14px;
-    margin-top: 40px;
+    margin-top: 0px;
 }
 
 .footer-icons {
@@ -122,4 +128,253 @@ footer {
 .footer-icons img:hover {
     transform: scale(1.2);
     cursor: pointer;
+}
+
+
+.video-container__wave-top {
+    position: fixed; /* Cambiato da absolute a fixed */
+    top: 0;
+    left: 0;
+    width: 100vw; /* Usa la larghezza della viewport */
+    height: 250px;
+    background: white;
+    clip-path: polygon(
+      0% 7%, 1% 10%, 2% 9%, 3% 11%, 4% 10%, 5% 10%, 6% 13%, 7% 13%, 8% 10%, 9% 8%, 
+      10% 12%, 11% 11%, 12% 7%, 13% 9%, 14% 9%, 15% 11%, 16% 12%, 17% 8%, 18% 10%, 
+      19% 10%, 20% 5%, 21% 5%, 22% 10%, 23% 9%, 24% 13%, 25% 11%, 26% 12%, 27% 12%, 
+      28% 8%, 29% 9%, 30% 10%, 31% 9%, 32% 12%, 33% 13%, 34% 13%, 35% 7%, 36% 10%, 
+      37% 11%, 38% 6%, 39% 7%, 40% 9%, 41% 11%, 42% 13%, 43% 11%, 44% 12%, 45% 8%, 
+      46% 8%, 47% 10%, 48% 9%, 49% 12%, 50% 14%, 51% 13%, 52% 11%, 53% 7%, 54% 9%, 
+      55% 10%, 56% 11%, 57% 9%, 58% 6%, 59% 7%, 60% 11%, 61% 12%, 62% 10%, 63% 9%, 
+      64% 9%, 65% 12%, 66% 11%, 67% 7%, 68% 9%, 69% 8%, 70% 10%, 71% 11%, 72% 12%, 
+      73% 14%, 74% 15%, 75% 12%, 76% 10%, 77% 10%, 78% 12%, 79% 14%, 80% 13%, 81% 11%, 
+      82% 10%, 83% 9%, 84% 7%, 85% 9%, 86% 8%, 87% 6%, 88% 10%, 89% 11%, 90% 12%, 
+      91% 10%, 92% 8%, 93% 9%, 94% 13%, 95% 14%, 96% 12%, 97% 9%, 98% 10%, 99% 5%, 
+      100% 7%, 0% 7%
+    );
+    z-index: 1;
+    pointer-events: none;
+    transform: translateY(25%);
+}
+
+
+.video-container__wave-fill-top {
+    position: fixed; /* Cambiato da absolute a fixed */
+    top: 0;
+    left: 0;
+    width: 100vw; /* Usa la larghezza della viewport */
+    height: 80px;
+    background-color: white;
+    z-index: 2;
+}
+
+/* Modifica della wave-bottom */
+.video-container__wave-bottom {
+    position: absolute; /* Cambiato da absolute a fixed */
+    bottom: 0;
+    left: 0;
+    width: 100vw; /* Usa la larghezza della viewport */
+    height: 250px;
+    background: rgb(240, 240, 240);
+    clip-path: polygon(
+      0% 93%, 1% 90%, 2% 91%, 3% 89%, 4% 90%, 5% 90%, 6% 87%, 7% 87%, 8% 90%, 9% 92%, 
+      10% 88%, 11% 89%, 12% 93%, 13% 91%, 14% 91%, 15% 89%, 16% 88%, 17% 92%, 18% 90%, 
+      19% 90%, 20% 95%, 21% 95%, 22% 90%, 23% 91%, 24% 87%, 25% 89%, 26% 88%, 27% 88%, 
+      28% 92%, 29% 91%, 30% 90%, 31% 91%, 32% 88%, 33% 87%, 34% 87%, 35% 93%, 36% 90%, 
+      37% 89%, 38% 94%, 39% 93%, 40% 91%, 41% 89%, 42% 87%, 43% 89%, 44% 88%, 45% 92%, 
+      46% 92%, 47% 90%, 48% 91%, 49% 88%, 50% 86%, 51% 87%, 52% 89%, 53% 93%, 54% 91%, 
+      55% 90%, 56% 89%, 57% 91%, 58% 94%, 59% 93%, 60% 89%, 61% 88%, 62% 90%, 63% 91%, 
+      64% 91%, 65% 88%, 66% 89%, 67% 93%, 68% 91%, 69% 92%, 70% 90%, 71% 89%, 72% 88%, 
+      73% 86%, 74% 85%, 75% 88%, 76% 90%, 77% 90%, 78% 88%, 79% 86%, 80% 87%, 81% 89%, 
+      82% 90%, 83% 91%, 84% 93%, 85% 91%, 86% 92%, 87% 94%, 88% 90%, 89% 89%, 90% 88%, 
+      91% 90%, 92% 92%, 93% 91%, 94% 87%, 95% 86%, 96% 88%, 97% 91%, 98% 90%, 99% 95%, 
+      100% 93%, 0% 93%
+    );
+    z-index: 0;
+    pointer-events: none;
+}
+
+.video-container__wave-fill-bottom {
+    position: absolute; /* Cambiato da absolute a fixed */
+    bottom: 0;
+    left: 0;
+    width: 100vw; /* Usa la larghezza della viewport */
+    height: 18px;
+    background-color: rgb(240, 240, 240);
+    z-index: 0;
+}
+
+
+.video-container__top-menu {
+    position: fixed; /* appena sotto la wave-top e la fill */
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    font-family: 'Bebas Neue', Arial, sans-serif;
+    top: 3%;
+    left: -30%;
+    width: 100%;
+    z-index: 3;
+    padding: 10px 30px;
+    background: transparent;
+    box-shadow: none;
+}
+
+
+.video-container__top-menu ul {
+    list-style: none;
+    display: flex;
+    gap: 50px;
+    margin: 0;
+    padding: 0;
+}
+
+.video-container__top-menu li a {
+    text-decoration: none;
+    color: #007acc;
+    font-size: 22px;
+    transition: color 0.3s, transform 0.2s;
+}
+
+.video-container__top-menu li a:hover {
+    color: #005a99;
+    transform: scale(1.05);
+    cursor: pointer;
+}
+  
+
+
+.video-container__play-now {
+    position: fixed;
+    top: 0;
+    right: 100px;
+    z-index: 1001;
+    transform: translateY(-15%);
+}
+
+.video-container__play-now-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    text-decoration: none;
+    position: relative;
+    cursor: pointer;
+}
+
+.video-container__play-now-button:hover {
+    transform: scale(1.05);
+}
+
+.video-container__play-now-icon {
+    width: auto;
+    height: 60%;
+}
+
+.video-container__play-now-text {
+    position: absolute;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    display: flex;
+    gap: 10px;
+    width: 70%
+
+}
+
+.video-container__play-now-text span {
+    display: inline-block;
+    font-size: 14px;
+}
+
+/* Il checkbox è invisibile, ma ne controlla lo stato */
+.video-container__play-now-checkbox {
+    display: none;
+}
+
+/* Menu a tendina */
+.video-container__dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 130px; /* Distanza tra il bottone e il menu */
+    left: 50%; /* Centrato rispetto al bottone */
+    transform: translateX(-55%); /* Centra il menu */
+    background-color: #f0f0f0; /* Grigio tenue */
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    width: 300px;
+}
+
+/* Sezioni e bottoni del menu */
+.video-container__dropdown-section {
+    margin-bottom: 20px; /* Spazio tra le sezioni */
+}
+
+.video-container__section-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #007acc; /* Colore del titolo */
+}
+
+.video-container__dropdown-btn {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    background-color: transparent; /* Sfondo trasparente */
+    color: #333; /* Colore del testo */
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Spazio tra l'icona e il testo */
+    transition: background-color 0.3s;
+}
+
+.video-container__dropdown-btn-text {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Pulsanti al passaggio del mouse */
+.video-container__dropdown-btn:hover {
+    background-color: #e0e0e0; /* Colore di sfondo al passaggio del mouse */
+}
+
+/* Icone dei pulsanti */
+.video-container__dropdown-icon {
+    width: 20px; /* Dimensione dell'icona */
+    height: 20px; /* Dimensione dell'icona */
+    object-fit: contain; /* Mantiene la proporzione dell'icona */
+}
+
+/* Quando il checkbox è selezionato, il menu appare */
+.video-container__play-now-checkbox:checked + .video-container__dropdown-menu {
+    display: block;
+}
+
+  
+
+
+
+@media (max-width: 768px) {
+    .overlay-image {
+      top: 25%; /* invece di 10%, così si sposta più in basso */
+      width: 80%; /* opzionale: la puoi anche ridurre un po' se serve */
+    }
+    .info-block {
+        flex-direction: column;
+      }
+    
+      .info-image {
+        order: -1;
+      }
 }

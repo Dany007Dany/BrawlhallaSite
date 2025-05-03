@@ -6,51 +6,130 @@
   <title>Home page</title>
   <link rel="stylesheet" href="homepage.css" />
   <link rel="icon" href="../Brawlhalla/Simboli vari/Brawlhalla_Logo_Corto.png" type="image/png" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 </head>
 
 <body>
   <div class="video-container">
+    <div class="video-container__wave-top"></div>
+    <div class="video-container__wave-fill-top"></div>
+    <nav class="video-container__top-menu">
+      <ul>
+        <li><a href="Homepage.html">Home</a></li>
+        <li><a href="pagina1.html">Personaggi</a></li>
+        <li><a href="pagina2.html">Mappe</a></li>
+      </ul>
+    </nav>
+    <div class="video-container__play-now">
+      <!-- Bottone che attiva il menu a tendina -->
+      <label for="playNowCheckbox" class="video-container__play-now-button">
+        <img src="../Brawlhalla/Simboli vari/Bottone.png" alt="Play Now" class="video-container__play-now-icon" />
+        <div class="video-container__play-now-text">
+          <span>PLAY NOW!</span>
+        
+        </div>
+      </label>
+    
+      <!-- Checkbox invisibile che controlla la visibilità del menu -->
+      <input type="checkbox" id="playNowCheckbox" class="video-container__play-now-checkbox" />
+    
+      <!-- Menu a tendina -->
+      <div class="video-container__dropdown-menu">
+        <!-- Sezione 1 -->
+        <div class="video-container__dropdown-section">
+          <h3 class="video-container__section-title">DESKTOP</h3>
+          <button class="video-container__dropdown-btn" onclick="window.location.href='https://link1.com'">
+            <img src="../Brawlhalla/Simboli vari/Icone dowload/steam.png" alt="Steam" class="video-container__dropdown-icon" />
+            <div class="video-container__dropdown-btn-text">Steam</div>
+          </button>
+          <button class="video-container__dropdown-btn" onclick="window.location.href='https://link2.com'">
+            <img src="../Brawlhalla/Simboli vari/Icone dowload/ubisoft.png" alt="Ubisoft Connect" class="video-container__dropdown-icon" /> 
+            <div class="video-container__dropdown-btn-text">Ubisoft Connect</div>
+          </button>
+          <button class="video-container__dropdown-btn" onclick="window.location.href='https://link3.com'">
+            <img src="../Brawlhalla/Simboli vari/Icone dowload/epic.png" alt="Epic Games Store" class="video-container__dropdown-icon" /> 
+            <div class="video-container__dropdown-btn-text">Epic Games Store</div>
+          </button>
+        </div>
+    
+        <!-- Sezione 2 -->
+        <div class="video-container__dropdown-section">
+          <h3 class="video-container__section-title">CONSOLE</h3>
+          <button class="video-container__dropdown-btn" onclick="window.location.href='https://link4.com'">
+            <img src="../Brawlhalla/Simboli vari/Icone dowload/ps.png" alt="PlayStation" class="video-container__dropdown-icon" /> 
+            <div class="video-container__dropdown-btn-text">PlayStation</div>
+          </button>
+          <button class="video-container__dropdown-btn" onclick="window.location.href='https://link5.com'">
+            <img src="../Brawlhalla/Simboli vari/Icone dowload/xbox.png" alt="Xbox" class="video-container__dropdown-icon" />
+            <div class="video-container__dropdown-btn-text">Xbox</div>
+          </button>
+          <button class="video-container__dropdown-btn" onclick="window.location.href='https://link6.com'">
+            <img src="../Brawlhalla/Simboli vari/Icone dowload/nintendo.png" alt="Nintendo Switch" class="video-container__dropdown-icon" /> 
+            <div class="video-container__dropdown-btn-text">Nintendo Switch</div>
+          </button>
+        </div>
+    
+        <!-- Sezione 3 -->
+        <div class="video-container__dropdown-section">
+          <h3 class="video-container__section-title">MOBILE</h3>
+          <button class="video-container__dropdown-btn" onclick="window.location.href='https://link7.com'">
+            <img src="../Brawlhalla/Simboli vari/Icone dowload/playstore.png" alt="Android" class="video-container__dropdown-icon" />
+            <div class="video-container__dropdown-btn-text">Android</div>
+          </button>
+          <button class="video-container__dropdown-btn" onclick="window.location.href='https://link8.com'">
+            <img src="../Brawlhalla/Simboli vari/Icone dowload/applestore.png" alt="iOS" class="video-container__dropdown-icon" /> 
+            <div class="video-container__dropdown-btn-text">iOS</div>
+          </button>
+        </div>
+      </div>
+    </div>
     <video autoplay loop muted>
       <source src="../Brawlhalla/Simboli vari/Video home page.mp4" type="video/mp4" />
     </video>
+    <div class="video-container__wave-bottom"></div>
+    <div class="video-container__wave-fill-bottom"></div>
+    <img src="../Brawlhalla/Simboli vari/Brawlhalla_Logo_Lungo.png" alt="Logo" class="video-container__overlay-image" />
 
-    <img src="../Brawlhalla/Simboli vari/Brawlhalla_Logo_Lungo.png" alt="Logo" class="overlay-image" />
-
-    <a href="Homepage.html" class="home-button">
+    <a href="Homepage.html" class="video-container__home-button">
       <img src="../Brawlhalla/Simboli vari/BrawlhallaLogoPiccolo.png" alt="Home" />
     </a>
+    
   </div>
+  </div>
+    
+    
+    
 
   <!-- Sezione informativa -->
   <section class="info-section">
-    <div class="info-block">
-      <div class="info-text">
+    <div class="info-section__info-block">
+      <div class="info-section__info-text">
         <h2>Cos'è Brawlhalla?</h2>
         <p>Brawlhalla è un platform fighting game free-to-play sviluppato da Blue Mammoth Games. Con uno stile simile a quello di Super Smash Bros., offre scontri frenetici fino a 8 giocatori in ambientazioni 2D, con modalità online e offline. Ogni personaggio ha il suo stile unico e armi specifiche.</p>
       </div>
-      <div class="info-image">
-        <img src="../Brawlhalla/Banners & Art/KeyArt.png">
+      <div class="info-section__info-image">
+        <img src="../Brawlhalla/Screenshots/brawl.webp" alt="Gameplay">
       </div>
     </div>
 
-    <div class="info-block reverse">
-      
-      <div class="info-text">
+    <div class="info-section__info-block">
+      <div class="info-section__info-image">
+        <img src="../Brawlhalla/Screenshots/Gen23_3FA.png" alt="Blue Mammoth Games Studio">
+      </div>
+      <div class="info-section__info-text">
         <h2>Chi sono i creatori?</h2>
         <p>Blue Mammoth Games è uno studio indie fondato negli Stati Uniti, conosciuto soprattutto per Brawlhalla. La compagnia è stata acquisita da Ubisoft nel 2018, che ha continuato a supportare il gioco con eventi, crossover e aggiornamenti costanti.</p>
       </div>
-      <div class="info-image">
-        <img src="../Brawlhalla/Banners & Art/KeyArt.png" alt="Blue Mammoth Games Studio">
-      </div>
+      
     </div>
 
-    <div class="info-block">
-      <div class="info-text">
+    <div class="info-section__info-block">
+      <div class="info-section__info-text">
         <h2>Com'è strutturato il gioco?</h2>
         <p>Brawlhalla offre un vasto roster di personaggi chiamati "Leggende", ognuna con due armi distinte. Sono disponibili modalità ranked, casual, tornei e persino crossover con franchise come Adventure Time, WWE, Street Fighter e molti altri.</p>
       </div>
-      <div class="info-image">
-        <img src="../Brawlhalla/Banners & Art/KeyArt.png" alt="Modalità di gioco">
+      <div class="info-section__info-image">
+        <img src="../Brawlhalla/Screenshots/Gen23_FFA.png" alt="Modalità di gioco">
       </div>
     </div>
   </section>
