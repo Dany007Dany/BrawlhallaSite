@@ -1,8 +1,8 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #fff;
-    color: #fff;
+    background-color: white;
+    color: white;
 }
 
 /* Contenitore video + immagini */
@@ -11,15 +11,19 @@ body {
     width: 100%;
     height: 100vh;
     overflow: hidden;
+    background-image: url('../Brawlhalla/Banners & Art/Banner_LegendGrid.png');
+    background-size: cover;
+    background-position: center;
 }
 
-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.video-container2 {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-image: url('../Brawlhalla/Banners & Art/Rh7dmM7.jpeg');
+  background-size: cover;
+  background-position: center;
 }
 
 .video-container__overlay-image {
@@ -31,7 +35,6 @@ video {
   max-width: 90%;
   pointer-events: none;
 }
-
 
 .video-container__home-button {
     position: fixed;
@@ -53,138 +56,262 @@ video {
     cursor: pointer;
 }
 
-/* Sezione info */
-.info-section {
-    padding: 60px 20px;
-    background-color: rgb(240, 240, 240);
-    color: #000;
-    font-family: 'Bebas Neue', Arial, sans-serif;
+
+
+
+
+
+/*------------------------------ Sezione personaggi --------------------------*/
+.characters-section {
+  padding-top: 1px; /* margine interno sopra per evitare collisioni */
+  position: relative; /* importante se hai un background video */
+  z-index: 1;
+  background-color: rgb(240, 240, 240); /* o metti un colore se serve */
 }
 
-.info-section h2 {
-    text-align: center;
-    margin-bottom: 40px;
-    font-size: 32px;
-    color: #007acc;
-    font-family: 'Bebas Neue', Arial, sans-serif;
-    letter-spacing: 1px;
-}
-
-/* Blocco per ogni sezione testo+immagine */
-.info-section__info-block {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-    margin-bottom: 60px;
-    padding: 0 20px;
+.characters-section h1 {
+  font-size: 48px;
+  text-align: center;
+  margin: 40px 0 20px;
+  color: #222;
+  font-family: 'Marker Felt', fantasy;
 }
 
 
-/* Testo nella sezione informativa */
-.info-section__info-text {
-    flex: 1 1 300px;
-    max-width: 600px;
-    font-size: 18px;
-    line-height: 1.6;
-    text-align: justify;
+.characters-wrapper {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  background-color: rgb(240, 240, 240);
+  color: #000;
 }
 
-/* Immagine nella sezione informativa */
-.info-section__info-image {
-    flex: 1 1 300px;
-    max-width: 500px;
-    text-align: center;
+.characters-grid {
+  display: grid;
+  gap: 25px;
+  grid-template-columns: repeat(8, 1fr); /* default: 8 colonne */
+  padding: 0 20px 0 20px;
 }
 
-.info-section__info-image img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+.character-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
+.character-box img {
+  width: 100px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.character-box img:hover {
+  transform: scale(1.15);
+  filter: drop-shadow(0 0 10px black)
+}
+
+.character-name {
+  margin-top: 10px;
+  font-size: 16px;
+  font-family: 'Marker Felt', fantasy;
+  color: #000;
+  letter-spacing: 1px;
+}
+
+/* ------------------- Parte per le armi --------------------- */
+.weapons-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.weapons-text {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 16px;
+  color: #444;
+}
+
+.weapons-text2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+  color: #444;
+  align-content: center;
+}
+ 
+.weapons-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  
+}
+
+.weapons-icons a img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.2s ease, filter 0.2s ease;
+  cursor: pointer;
+}
+
+.weapons-icons a img:hover {
+  transform: scale(0.92);
+  filter: drop-shadow(0 0 10px black);
+}
+
+
+/*------------------------------ Mappe --------------------------*/
+.maps-section {
+  padding-top: 1px; /* margine interno sopra per evitare collisioni */
+  position: relative; /* importante se hai un background video */
+  z-index: 1;
+  background-color: rgb(240, 240, 240); /* o metti un colore se serve */
+}
+
+.maps-section h1 {
+  font-size: 48px;
+  text-align: center;
+  margin: 40px 0 40px;
+  color: #222;
+  font-family: 'Marker Felt', fantasy;
+}
+
+
+.maps-wrapper {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  background-color: rgb(240, 240, 240);
+  color: #000;
+}
+
+.maps-grid {
+  display: grid;
+  gap: 0px;
+  grid-template-columns: repeat(7, 1fr); /* default: 8 colonne */
+  padding: 0 20px 0 20px;
+}
+
+.maps-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.maps-box img {
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  filter: drop-shadow(0 0 5px black);
+}
+
+.maps-box img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  filter: drop-shadow(0 0 10px black);
+  cursor: pointer;
+}
+
+.maps-name {
+  margin-top: 10px;
+  font-size: 16px;
+  font-family: 'Marker Felt', fantasy;
+  color: #000;
+  letter-spacing: 1px;
+}
+
+
+
+
+
+
 
 /* Footer */
 footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: #111;
-    color: white;
-    width: 100%;
-    box-sizing: border-box;
-  }
-  
-  .footer__left-img{
-    display: flex;
-    flex: 1; /* Fa in modo che il contenitore centrale occupi lo spazio disponibile */
-  }
-  .footer__left-img img {
-    height: 250px; /* Puoi regolare questa altezza in base alle tue esigenze */
-    width: auto;
-  }
-  
-  .footer__center-content {
-    position: relative;
-    bottom: 0;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Allinea gli elementi al centro orizzontalmente */
-    justify-content: center; /* Allinea gli elementi al centro verticalmente */
-  }
-  
-  .footer__text {
-    margin-bottom: 10px;
-  }
-  
-  .footer__icons {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin-top: 10px;
-  }
-  
-  .footer__icons img {
-    width: 30px;
-    height: 30px;
-    transition: transform 0.3s;
-  }
-  
-  .footer__icons img:hover {
-    transform: scale(1.2);
-    cursor: pointer;
-  }
-  
-  .footer__right-imgs {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end; /* Allinea a destra */
-    gap: 10px;
-    flex: 1; /* Assegna lo stesso spazio al blocco destro */
-  }
-  
-  .footer-right-imgs-top {
-    width: 320px; /* Modifica l'ampiezza della grande immagine come desideri */
-    height: auto;
-  }
-  
-  .footer__right-imgs-bottom {
-    display: flex;
-    gap: 10px; /* Spazio tra le due immagini piccole */
-  }
-  
-  .footer__right-imgs-bottom-1 img {
-    width: 250px; /* Imposta la larghezza delle immagini piccole */
-    height: auto;
-  }
-  
-  .footer__right-imgs-bottom-2 img {
-    width: 70px; /* Imposta la larghezza delle immagini piccole */
-    height: auto;
-  }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #111;
+  color: white;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.footer__left-img{
+  display: flex;
+  flex: 1; /* Fa in modo che il contenitore centrale occupi lo spazio disponibile */
+}
+.footer__left-img img {
+  height: 250px; /* Puoi regolare questa altezza in base alle tue esigenze */
+  width: auto;
+}
+
+.footer__center-content {
+  position: relative;
+  bottom: 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Allinea gli elementi al centro orizzontalmente */
+  justify-content: center; /* Allinea gli elementi al centro verticalmente */
+}
+
+.footer__text {
+  margin-bottom: 10px;
+}
+
+.footer__icons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 10px;
+}
+
+.footer__icons img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s;
+}
+
+.footer__icons img:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.footer__right-imgs {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* Allinea a destra */
+  gap: 10px;
+  flex: 1; /* Assegna lo stesso spazio al blocco destro */
+}
+
+.footer-right-imgs-top {
+  width: 320px; /* Modifica l'ampiezza della grande immagine come desideri */
+  height: auto;
+}
+
+.footer__right-imgs-bottom {
+  display: flex;
+  gap: 10px; /* Spazio tra le due immagini piccole */
+}
+
+.footer__right-imgs-bottom-1 img {
+  width: 250px; /* Imposta la larghezza delle immagini piccole */
+  height: auto;
+}
+
+.footer__right-imgs-bottom-2 img {
+  width: 70px; /* Imposta la larghezza delle immagini piccole */
+  height: auto;
+}
 
 
 .video-container__wave-top {
@@ -208,7 +335,7 @@ footer {
       91% 10%, 92% 8%, 93% 9%, 94% 13%, 95% 14%, 96% 12%, 97% 9%, 98% 10%, 99% 5%, 
       100% 7%, 0% 7%
     );
-    z-index: 1;
+    z-index: 2;
     pointer-events: none;
     transform: translateY(25%);
 }
@@ -280,6 +407,7 @@ footer {
 
 
 .video-container__top-menu ul {
+    list-style: none;
     position: fixed;
     left: 130px;
     top: 25px;
@@ -581,26 +709,11 @@ footer {
     
     
     
-    .info-section__info-block {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    /* Modifica l'ordine degli elementi */
-    .info-section__info-block:nth-child(2) .info-section__info-text {
-      order: 1; /* Testo 2 va dopo l'immagine 1 */
-    }
-  
-    .info-section__info-block:nth-child(2) .info-section__info-image {
-      order: 2; /* Immagine 2 va dopo il testo 2 */
-    }
-  
-    .info-section__info-block:nth-child(3) .info-section__info-text {
-      order: 3; /* Testo 3 rimane l'ultimo */
-    }
-  
-    .info-section__info-block:nth-child(3) .info-section__info-image {
-      order: 4; /* Immagine 3 rimane alla fine */
+
+    
+    .characters-section h1 {
+      width: 100vw;
+      text-align: center;
     }
     
     
@@ -608,9 +721,7 @@ footer {
     
     
     
-    
-    
-}  
+  }  
     
   @media (max-width: 890px)  {
     footer {
@@ -628,6 +739,7 @@ footer {
         display: flex;
         justify-content: center;
         align-items: center;
+        text-align: center;
     }
     
       .footer__left-img img,
@@ -660,3 +772,82 @@ footer {
       }
     }
 
+
+
+@media (max-width: 1030px) {
+      .characters-grid {
+        grid-template-columns: repeat(7, 1fr);
+      }
+    }
+    
+@media (max-width: 905px) {
+      .characters-grid {
+        grid-template-columns: repeat(6, 1fr);
+      }
+    }
+    
+@media (max-width: 780px) {
+      .characters-grid {
+        grid-template-columns: repeat(5, 1fr);
+      }
+    }
+
+@media (max-width: 650px) {
+      .characters-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+@media (max-width: 530px) {
+      .characters-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+@media (max-width: 405px) {
+      .characters-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+@media (max-width: 280px) {
+      .characters-grid {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+
+
+
+
+
+
+
+@media (max-width: 1450px){
+      .maps-grid{
+        grid-template-columns: repeat(6, 1fr);
+      }
+    }
+@media (max-width: 1280px){
+      .maps-grid{
+        grid-template-columns: repeat(5, 1fr);
+      }
+    }
+@media (max-width: 1080px){
+      .maps-grid{
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+@media (max-width: 900px){
+      .maps-grid{
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  
+@media (max-width: 730px){
+      .maps-grid{
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  @media (max-width: 470px){
+      .maps-grid{
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
