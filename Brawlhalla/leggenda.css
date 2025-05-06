@@ -219,7 +219,7 @@ body {
 }
 
 .video-container__play-now-button:hover {
-    transform: scale(1.05);
+  filter: drop-shadow(0 0 10px black);
 }
 
 .video-container__play-now-icon {
@@ -581,88 +581,6 @@ h4 {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* Footer */
 footer {
     display: flex;
@@ -765,10 +683,10 @@ footer {
       position: fixed;
       left: 50%;
       transform: translate(-50%);
-      top: 5px;
+      top: 1px;
       display: flex;
       flex-direction: column;
-      gap: 0.5em;
+      gap: 0;
       margin: 0;
       padding: 0;
       list-style: none;
