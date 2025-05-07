@@ -402,7 +402,7 @@ body {
   text-decoration: none;
   z-index: 10;
   transition: transform 0.2s;
-  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 .arrow-icon {
@@ -824,6 +824,21 @@ footer {
       text-align: center;
     }
     
+    .back-button {
+      padding: 6px 10px;
+      gap: 6px;
+      top: 15%;
+      left: 3%;
+      transform: scale(0.9); /* Rimpicciolisce il bottone */
+    }
+  
+    .arrow-icon {
+      width: 30px;
+    }
+  
+    .arrow-text {
+      font-size: 16px;
+    }
     
     
     
@@ -930,7 +945,28 @@ footer {
     }
 
 
+@media (max-width: 600px) {
+  .weapon-item {
+    flex-wrap: wrap;
+    width: 100%; /* Occupa tutta la larghezza del contenitore */
+    justify-content: center;
+  }
 
+  .stat-value,
+  .stat-text {
+    font-size: 18px; /* Rimpicciolisce le statistiche */
+    margin: 5px;
+  }
+
+  .weapon-icon,
+  .weapon-img {
+    width: 40px; /* Riduce dimensioni delle immagini */
+  }
+
+  .weapon-img {
+    border-radius: 8px;
+  }
+}
 
 
 
