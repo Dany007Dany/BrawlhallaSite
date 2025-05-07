@@ -1,0 +1,606 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Marker Felt', fantasy;;
+    color: rgb(240, 240, 240);
+    line-height: 1.6;
+    background-color: rgb(240, 240, 240);
+
+  }
+
+    /* Contenitore video + immagini */
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-image: url('../Brawlhalla/Banners & Art/Banner_LegendGrid.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.video-container2 {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-image: url('../Brawlhalla/Banners & Art/Rh7dmM7.jpeg');
+  background-size: cover;
+  background-position: center;
+}
+
+.video-container__overlay-image {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  max-width: 90%;
+  pointer-events: none;
+}
+
+.video-container__home-button {
+    position: fixed;
+    top: 18px;
+    left: 20px;
+    width: 150px;
+    z-index: 1000;
+}
+
+.video-container__home-button img {
+    width: 100%;
+    filter: drop-shadow(0 0 5px black);
+    transition: transform 0.3s ease;
+}
+
+.video-container__home-button:hover img {
+    transform: scale(0.85);
+    filter: drop-shadow(0 0 10px black);
+    cursor: pointer;
+}
+
+.video-container__wave-top {
+    position: fixed; /* Cambiato da absolute a fixed */
+    top: 0;
+    left: 0;
+    width: 1920px; /* Usa la larghezza della viewport */
+    height: 250px;
+    background: white;
+    clip-path: polygon(
+      0% 7%, 1% 10%, 2% 9%, 3% 11%, 4% 10%, 5% 10%, 6% 13%, 7% 13%, 8% 10%, 9% 8%, 
+      10% 12%, 11% 11%, 12% 7%, 13% 9%, 14% 9%, 15% 11%, 16% 12%, 17% 8%, 18% 10%, 
+      19% 10%, 20% 5%, 21% 5%, 22% 10%, 23% 9%, 24% 13%, 25% 11%, 26% 12%, 27% 12%, 
+      28% 8%, 29% 9%, 30% 10%, 31% 9%, 32% 12%, 33% 13%, 34% 13%, 35% 7%, 36% 10%, 
+      37% 11%, 38% 6%, 39% 7%, 40% 9%, 41% 11%, 42% 13%, 43% 11%, 44% 12%, 45% 8%, 
+      46% 8%, 47% 10%, 48% 9%, 49% 12%, 50% 14%, 51% 13%, 52% 11%, 53% 7%, 54% 9%, 
+      55% 10%, 56% 11%, 57% 9%, 58% 6%, 59% 7%, 60% 11%, 61% 12%, 62% 10%, 63% 9%, 
+      64% 9%, 65% 12%, 66% 11%, 67% 7%, 68% 9%, 69% 8%, 70% 10%, 71% 11%, 72% 12%, 
+      73% 14%, 74% 15%, 75% 12%, 76% 10%, 77% 10%, 78% 12%, 79% 14%, 80% 13%, 81% 11%, 
+      82% 10%, 83% 9%, 84% 7%, 85% 9%, 86% 8%, 87% 6%, 88% 10%, 89% 11%, 90% 12%, 
+      91% 10%, 92% 8%, 93% 9%, 94% 13%, 95% 14%, 96% 12%, 97% 9%, 98% 10%, 99% 5%, 
+      100% 7%, 0% 7%
+    );
+    z-index: 2;
+    pointer-events: none;
+    transform: translateY(25%);
+}
+
+
+.video-container__wave-fill-top {
+    position: fixed; /* Cambiato da absolute a fixed */
+    top: 0;
+    left: 0;
+    width: 100vw; /* Usa la larghezza della viewport */
+    height: 80px;
+    background-color: white;
+    z-index: 2;
+}
+
+.video-container__top-menu {
+    position: fixed; /* appena sotto la wave-top e la fill */
+    background-color: rgb(240, 240, 240);
+    display: flex;
+    justify-content: center;
+    font-family: 'Marker Felt', fantasy;
+    top: 3%;
+    left: -30%;
+    width: 100vw;
+    z-index: 3;
+    padding: 10px 30px;
+    background: transparent;
+    box-shadow: none;
+}
+
+
+.video-container__top-menu ul {
+    list-style: none;
+    position: fixed;
+    left: 130px;
+    top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.video-container__top-menu li a {
+    white-space: nowrap; /* Impedisce la rottura del testo */
+    font-size: 0.9em; /* eventualmente riduci un po' la dimensione */
+    padding: 0.25em 0.5em;
+    text-decoration: none;
+    color: #007acc;
+    font-size: 22px;
+    transition: color 0.3s, transform 0.2s;
+}
+
+.video-container__top-menu li a:hover {
+    color: #005a99;
+    transform: scale(1.05);
+    cursor: pointer;
+}
+  
+
+
+.video-container__play-now {
+    position: fixed;
+    top: 0;
+    right: 100px;
+    z-index: 1001;
+    transform: translateY(-15%);
+}
+
+.video-container__play-now-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    text-decoration: none;
+    position: relative;
+    cursor: pointer;
+}
+
+.video-container__play-now-button:hover {
+  filter: drop-shadow(0 0 10px black);
+}
+
+.video-container__play-now-icon {
+    width: auto;
+    height: 60%;
+}
+
+.video-container__play-now-text {
+    position: absolute;
+    color: white;
+    text-align: center;
+    display: flex;
+    gap: 10px;
+    width: 115%
+
+}
+
+.video-container__play-now-text span {
+    font-family: 'Marker Felt', fantasy;
+    font-weight: 400;
+    font-size: 25px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: black;
+    text-shadow: 0 0 20px #000, 0 0 20px black;
+    background: linear-gradient(90deg, black, black);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.video-container__play-now:hover .video-container__play-now-text span {
+    animation: pulse 1.5s infinite;
+  }
+  
+
+.video-container__play-now-text span:hover {
+    animation: none;
+  }
+  
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.08); }
+    100% { transform: scale(1); }
+  }
+
+
+
+/* Il checkbox è invisibile, ma ne controlla lo stato */
+.video-container__play-now-checkbox {
+    display: none;
+}
+
+/* Menu a tendina */
+.video-container__dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 130px; /* Distanza tra il bottone e il menu */
+    left: 50%; /* Centrato rispetto al bottone */
+    transform: translateX(-55%); /* Centra il menu */
+    background-color: #f0f0f0; /* Grigio tenue */
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    width: 300px;
+}
+
+/* Sezioni e bottoni del menu */
+.video-container__dropdown-section {
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 20px; /* Spazio tra le sezioni */
+}
+
+.video-container__section-title {
+    text-align: center;
+    font-family: "Marker Felt", fantasy;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #007acc; /* Colore del titolo */
+}
+
+.video-container__dropdown-btn {
+  display: flex;              /* Assicura layout corretto */
+  align-items: center;        /* Allinea verticalmente icona e testo */
+  justify-content: flex-start;/* Allinea contenuto a sinistra */
+  width: 100%;                /* Occupa tutta la larghezza della tendina */
+  box-sizing: border-box;     /* Include padding nel 100% di width */
+  padding: 10px;
+  margin: 5px 0;
+  background-color: transparent;
+  color: #333;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  gap: 10px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.video-container__dropdown-btn-text {
+  font-family: "Marker Felt", fantasy;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Pulsanti al passaggio del mouse */
+.video-container__dropdown-btn:hover {
+  background-color: #e0e0e0;
+}
+
+/* Icone dei pulsanti */
+.video-container__dropdown-icon {
+    transform: translateX(175%);
+    filter: invert(100%);
+    width: 20px; /* Dimensione dell'icona */
+    height: 20px; /* Dimensione dell'icona */
+    object-fit: contain; /* Mantiene la proporzione dell'icona */
+}
+
+/* Quando il checkbox è selezionato, il menu appare */
+.video-container__play-now-checkbox:checked + .video-container__dropdown-menu {
+    display: block;
+}
+
+.video-container__map-image {
+  margin-top: 20px;
+  background: url('https://www.transparenttextures.com/patterns/dark-denim.png');
+  background-color: #1a1a1a;
+  text-align: center;
+  padding: 60px 0;
+}
+
+.video-container__map-text {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.video-container__map-image img {
+  max-width: 90%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.4s;
+}
+
+.video-container__map-image img:hover {
+  transform: scale(0.95);
+  filter: drop-shadow(0 0 10px grey);
+}
+
+
+.back-button {
+  position: fixed;
+  top: 20%; /* Distanza dalla parte superiore */
+  left: 10%; /* Distanza dalla parte sinistra */
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.arrow-icon {
+  width: 40px; /* Imposta la dimensione dell'icona della freccia */
+  height: auto;
+  filter: drop-shadow(0 0 5px white); /* Stile per l'ombra */
+}
+
+
+
+/* Footer */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #111;
+    color: white;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .footer__left-img{
+    display: flex;
+    flex: 1; /* Fa in modo che il contenitore centrale occupi lo spazio disponibile */
+  }
+  .footer__left-img img {
+    height: 250px; /* Puoi regolare questa altezza in base alle tue esigenze */
+    width: auto;
+  }
+  
+  .footer__center-content {
+    position: relative;
+    bottom: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Allinea gli elementi al centro orizzontalmente */
+    justify-content: center; /* Allinea gli elementi al centro verticalmente */
+  }
+  
+  .footer__text {
+    margin-bottom: 10px;
+  }
+  
+  .footer__icons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 10px;
+  }
+  
+  .footer__icons img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s;
+  }
+  
+  .footer__icons img:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+  }
+  
+  .footer__right-imgs {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Allinea a destra */
+    gap: 10px;
+    flex: 1; /* Assegna lo stesso spazio al blocco destro */
+  }
+  
+  .footer-right-imgs-top {
+    width: 320px; /* Modifica l'ampiezza della grande immagine come desideri */
+    height: auto;
+  }
+  
+  .footer__right-imgs-bottom {
+    display: flex;
+    gap: 10px; /* Spazio tra le due immagini piccole */
+  }
+  
+  .footer__right-imgs-bottom-1 img {
+    width: 250px; /* Imposta la larghezza delle immagini piccole */
+    height: auto;
+  }
+  
+  .footer__right-imgs-bottom-2 img {
+    width: 70px; /* Imposta la larghezza delle immagini piccole */
+    height: auto;
+  }
+
+
+
+  @media (max-width: 768px) {
+
+    .video-container__top-menu {
+      position: fixed;
+      top: 0px; /* spostato più in alto */
+      left: 50%;
+      transform: translateX(-50%);
+      background: transparent;
+      box-shadow: none;
+      padding: 0.5em 1em;
+      border-radius: 12px;
+      z-index: 10;
+    }
+
+    .video-container__top-menu ul {
+      position: fixed;
+      left: 50%;
+      transform: translate(-50%);
+      top: 1px;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      align-items: center;
+    }
+
+    .video-container__top-menu li a {
+      color: #007acc;
+      text-decoration: none;
+      font-size: 1em;
+    }
+
+    .video-container__play-now {
+      position: fixed;
+      top: -20px;
+      right: 10px;
+      transform: none;
+      z-index: 15;
+    }
+
+    .video-container__play-now-button {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    .video-container__play-now-icon {
+        width: 100px; /* ridotto ma non stirato */
+        height: auto; /* mantiene proporzioni */
+    }
+    .video-container__play-now-text {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+    .video-container__play-now-text span {
+      font-family: 'Marker Felt', fantasy;
+      font-weight: 400;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: black;
+      text-shadow: 0 0 20px #000, 0 0 20px black;
+      background: linear-gradient(90deg, black, black);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      transition: transform 0.3s ease;
+    }
+    
+    .video-container__play-now:hover .video-container__play-now-text span {
+        animation: pulse 1.5s infinite;
+    }
+      
+    
+    .video-container__play-now-text span:hover {
+        animation: none;
+    }
+
+    
+    
+    
+    .video-container__dropdown-menu {
+      position: absolute;
+      top: 125%; /* subito sotto al bottone */
+      left: -25%;
+      transform: translateX(-50%);
+      width: 210%;
+      z-index: 999;
+      background-color: white;
+      white-space: nowrap;
+      padding: 0.5em 1em;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    }
+    
+    
+    
+    .overlay-image {
+      top: 25%; /* invece di 10%, così si sposta più in basso */
+      width: 80%; /* opzionale: la puoi anche ridurre un po' se serve */
+    }
+    
+
+    .video-container__wave-fill-top {
+      height: 81px;
+    }
+
+    .video-container__wave-fill-bottom{
+      bottom: -1px;
+      height: 19px;
+    }
+    
+    
+    
+    
+
+    
+    .characters-section h1 {
+      width: 100vw;
+      text-align: center;
+    }
+    
+    
+    
+    
+    
+    
+  }  
+    
+  @media (max-width: 890px)  {
+    footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+      }
+    
+    .footer__left-img,
+    .footer__center-content,
+    .footer__right-imgs {
+        flex: none;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    
+      .footer__left-img img,
+      .footer-right-imgs-top,
+      .footer__right-imgs-bottom-1 img,
+      .footer__right-imgs-bottom-2 img {
+        max-width: 80%;
+        height: auto;
+      }
+    
+      .footer__right-imgs {
+        flex-direction: column;
+        align-items: center;
+      }
+    
+      .footer__right-imgs-bottom {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+    
+      .footer__icons {
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+    
+      .footer__icons img {
+        width: 24px;
+        height: 24px;
+      }
+    }
+
