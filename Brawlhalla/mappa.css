@@ -1,12 +1,12 @@
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Marker Felt', fantasy;;
-    color: rgb(240, 240, 240);
-    line-height: 1.6;
-    background-color: rgb(240, 240, 240);
-
-  }
+  margin: 0;
+  padding: 0;
+  font-family: 'Georgia', serif;
+  background: url('https://www.transparenttextures.com/patterns/dark-denim.png');
+  color: rgb(240, 240, 240);
+  line-height: 1.6;
+  background-color: #1a1a1a;
+}
 
     /* Contenitore video + immagini */
 .video-container {
@@ -85,7 +85,6 @@ body {
     transform: translateY(25%);
 }
 
-
 .video-container__wave-fill-top {
     position: fixed; /* Cambiato da absolute a fixed */
     top: 0;
@@ -137,8 +136,6 @@ body {
     cursor: pointer;
 }
   
-
-
 .video-container__play-now {
     position: fixed;
     top: 0;
@@ -320,20 +317,41 @@ body {
 }
 
 
+/* 🔁 Nuovo stile del bottone */
 .back-button {
   position: fixed;
-  top: 20%; /* Distanza dalla parte superiore */
-  left: 10%; /* Distanza dalla parte sinistra */
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
+  top: 15%;
+  left: 5%;
+  background-color: rgba(255, 255, 255, 0.2); /* Sfondo semitrasparente */
+  border-radius: 12px; /* Bordi arrotondati */
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
   z-index: 10;
+  transition: transform 0.2s;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 .arrow-icon {
-  width: 40px; /* Imposta la dimensione dell'icona della freccia */
+  width: 40px;
   height: auto;
-  filter: drop-shadow(0 0 5px white); /* Stile per l'ombra */
+  filter: drop-shadow(0 0 5px white);
+  transition: transform 0.2s ease;
+}
+
+.arrow-text {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  transition: transform 0.2s ease;
+}
+
+
+.back-button:hover {
+  transform: scale(1.03); /* Ingrandisce tutto il riquadro */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.9); /* Opzionale: ombra più intensa all'hover */
 }
 
 
