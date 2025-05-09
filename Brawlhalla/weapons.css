@@ -1,91 +1,25 @@
 body {
     margin: 0;
-    padding: 0;
-    font-family: 'Georgia', serif;
-    background: url('https://www.transparenttextures.com/patterns/dark-denim.png');
-    color: rgb(240, 240, 240);
-    line-height: 1.6;
-    background-color: #1a1a1a;
-  }
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    color: #fff;
+}
 
-
-  
-  .saga {
-    max-width: 800px;
-    margin: 60px 0 0 20px;
-    padding: 30px;
-    background: rgba(0, 0, 0, 0.6);
-    border: 3px solid #d4af37;
-    border-radius: 15px;
-    box-shadow: 0 0 30px #000;
-  }
-  
-  .saga h1 {
-    text-align: center;
-    font-size: 50px;
-    color: #ffd700;
-    text-shadow: 2px 2px 5px #000;
-  }
-
-  .saga h2, .saga h3 {
-    text-align: center;
-    color: #ffd700;
-    text-shadow: 2px 2px 5px #000;
-  }
-  
-  .saga h2 {
-    font-size: 2em;
-    margin-bottom: 10px;
-  }
-  
-  .saga h3 {
-    font-size: 1.4em;
-    margin-bottom: 20px;
-    font-style: italic;
-  }
-  
-  .saga blockquote {
-    border-left: 4px solid #d4af37;
-    margin: 20px 0;
-    padding-left: 15px;
-    font-style: italic;
-    color: #ccc;
-    background: rgba(255, 255, 255, 0.05);
-  }
-  
-  .saga blockquote footer {
-    margin-top: 5px;
-    font-size: 0.9em;
-    color: #999;
-  }
-  
-  strong {
-    color: #ffd700;
-  }
-  
-  em {
-    color: #ccc;
-  }
-
-  /* Contenitore video + immagini */
+/* Contenitore video + immagini */
 .video-container {
     position: relative;
     width: 100%;
     height: 100vh;
     overflow: hidden;
-    background-image: url('../Brawlhalla/Banners & Art/Banner_LegendGrid.png');
-    background-size: cover;
-    background-position: center;
 }
 
-.video-container2 {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-  background-image: url('../Brawlhalla/Banners & Art/Rh7dmM7.jpeg');
-  background-size: cover;
-  background-position: center;
+.video-container-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .video-container__overlay-image {
@@ -97,6 +31,7 @@ body {
   max-width: 90%;
   pointer-events: none;
 }
+
 
 .video-container__home-button {
     position: fixed;
@@ -117,6 +52,89 @@ body {
     filter: drop-shadow(0 0 10px black);
     cursor: pointer;
 }
+
+
+/* Footer */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #111;
+    color: white;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .footer__left-img{
+    display: flex;
+    flex: 1; /* Fa in modo che il contenitore centrale occupi lo spazio disponibile */
+  }
+  .footer__left-img img {
+    height: 250px; /* Puoi regolare questa altezza in base alle tue esigenze */
+    width: auto;
+  }
+  
+  .footer__center-content {
+    position: relative;
+    bottom: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Allinea gli elementi al centro orizzontalmente */
+    justify-content: center; /* Allinea gli elementi al centro verticalmente */
+  }
+  
+  .footer__text {
+    margin-bottom: 10px;
+  }
+  
+  .footer__icons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 10px;
+  }
+  
+  .footer__icons img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s;
+  }
+  
+  .footer__icons img:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+  }
+  
+  .footer__right-imgs {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Allinea a destra */
+    gap: 10px;
+    flex: 1; /* Assegna lo stesso spazio al blocco destro */
+  }
+  
+  .footer-right-imgs-top {
+    width: 320px; /* Modifica l'ampiezza della grande immagine come desideri */
+    height: auto;
+  }
+  
+  .footer__right-imgs-bottom {
+    display: flex;
+    gap: 10px; /* Spazio tra le due immagini piccole */
+  }
+  
+  .footer__right-imgs-bottom-1 img {
+    width: 250px; /* Imposta la larghezza delle immagini piccole */
+    height: auto;
+  }
+  
+  .footer__right-imgs-bottom-2 img {
+    width: 70px; /* Imposta la larghezza delle immagini piccole */
+    height: auto;
+  }
+
 
 .video-container__wave-top {
     position: fixed; /* Cambiato da absolute a fixed */
@@ -139,7 +157,7 @@ body {
       91% 10%, 92% 8%, 93% 9%, 94% 13%, 95% 14%, 96% 12%, 97% 9%, 98% 10%, 99% 5%, 
       100% 7%, 0% 7%
     );
-    z-index: 2;
+    z-index: 1;
     pointer-events: none;
     transform: translateY(25%);
 }
@@ -155,9 +173,48 @@ body {
     z-index: 2;
 }
 
+/* Modifica della wave-bottom */
+.video-container__wave-bottom {
+    position: absolute; /* Cambiato da absolute a fixed */
+    bottom: 0;
+    left: 0;
+    width: 1920px; /* Usa la larghezza della viewport */
+    height: 250px;
+    background: rgb(240, 240, 240);
+    clip-path: polygon(
+      0% 93%, 1% 90%, 2% 91%, 3% 89%, 4% 90%, 5% 90%, 6% 87%, 7% 87%, 8% 90%, 9% 92%, 
+      10% 88%, 11% 89%, 12% 93%, 13% 91%, 14% 91%, 15% 89%, 16% 88%, 17% 92%, 18% 90%, 
+      19% 90%, 20% 95%, 21% 95%, 22% 90%, 23% 91%, 24% 87%, 25% 89%, 26% 88%, 27% 88%, 
+      28% 92%, 29% 91%, 30% 90%, 31% 91%, 32% 88%, 33% 87%, 34% 87%, 35% 93%, 36% 90%, 
+      37% 89%, 38% 94%, 39% 93%, 40% 91%, 41% 89%, 42% 87%, 43% 89%, 44% 88%, 45% 92%, 
+      46% 92%, 47% 90%, 48% 91%, 49% 88%, 50% 86%, 51% 87%, 52% 89%, 53% 93%, 54% 91%, 
+      55% 90%, 56% 89%, 57% 91%, 58% 94%, 59% 93%, 60% 89%, 61% 88%, 62% 90%, 63% 91%, 
+      64% 91%, 65% 88%, 66% 89%, 67% 93%, 68% 91%, 69% 92%, 70% 90%, 71% 89%, 72% 88%, 
+      73% 86%, 74% 85%, 75% 88%, 76% 90%, 77% 90%, 78% 88%, 79% 86%, 80% 87%, 81% 89%, 
+      82% 90%, 83% 91%, 84% 93%, 85% 91%, 86% 92%, 87% 94%, 88% 90%, 89% 89%, 90% 88%, 
+      91% 90%, 92% 92%, 93% 91%, 94% 87%, 95% 86%, 96% 88%, 97% 91%, 98% 90%, 99% 95%, 
+      100% 93%, 0% 93%
+    );
+    z-index: 0;
+    pointer-events: none;
+}
+
+.video-container__wave-fill-bottom {
+    position: absolute; /* Cambiato da absolute a fixed */
+    bottom: 0;
+    left: 0;
+    width: 100vw; /* Usa la larghezza della viewport */
+    height: 18px;
+    background-color: rgb(240, 240, 240);
+    z-index: 0;
+}
+
+
+
+
 .video-container__top-menu {
     position: fixed; /* appena sotto la wave-top e la fill */
-    background-color: rgb(240, 240, 240);
+    background-color: white;
     display: flex;
     justify-content: center;
     font-family: 'Marker Felt', fantasy;
@@ -172,10 +229,9 @@ body {
 
 
 .video-container__top-menu ul {
-    list-style: none;
     position: fixed;
     left: 130px;
-    top: 20px;
+    top: 25px;
     display: flex;
     gap: 10px;
 }
@@ -219,7 +275,7 @@ body {
 }
 
 .video-container__play-now-button:hover {
-  filter: drop-shadow(0 0 10px black);
+    filter: drop-shadow(0 0 10px black);
 }
 
 .video-container__play-now-icon {
@@ -243,8 +299,7 @@ body {
     font-size: 25px;
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: black;
-    text-shadow: 0 0 20px #000, 0 0 20px black;
+    color: white;
     background: linear-gradient(90deg, black, black);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -350,354 +405,69 @@ body {
 }
 
 
-
-
-
-
-.saga-container {
-  position: relative; /* Permette al bottone di posizionarsi rispetto a questo box */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
-  margin: 60px 20px 0 20px;
-  flex-wrap: wrap; /* Così su schermi piccoli va sotto */
-}
-
-.saga-image {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-}
-
-.saga-image img {
-  max-width: 350px;
-  height: auto;
-  border-radius: 15px;
-  border: 3px solid #d4af37;
-  box-shadow: 0 0 20px #000;
-}
-
-.saga-image .sub-image {
-  max-width: 250px;
-  margin-top: 10px;
-}
-
-.saga-image img:hover {
-  filter: drop-shadow(0 0 10px gold);
-}
-
-/* 🔁 Nuovo stile del bottone */
-.back-button {
-  position: fixed;
-  top: 15%;
-  left: 5%;
-  background-color: rgba(255, 255, 255, 0.2); /* Sfondo semitrasparente */
-  border-radius: 12px; /* Bordi arrotondati */
-  padding: 8px 12px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  text-decoration: none;
-  z-index: 10;
-  transition: transform 0.2s;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-}
-
-.arrow-icon {
-  width: 40px;
-  height: auto;
-  filter: drop-shadow(0 0 5px white);
-  transition: transform 0.2s ease;
-}
-
-.arrow-text {
-  font-size: 20px;
-  font-weight: bold;
-  color: white;
-  transition: transform 0.2s ease;
-}
-
-
-.back-button:hover {
-  transform: scale(1.03); /* Ingrandisce tutto il riquadro */
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.9); /* Opzionale: ombra più intensa all'hover */
-}
-
-
-
-
-/*------------------------------ Sezione weapons --------------------------*/
+/*------------------------------ Sezione armi --------------------------*/
 .weapons-section {
-  margin: 40px auto;
-  padding: 20px;
-  max-width: 600px;
+  padding-top: 1px; /* margine interno sopra per evitare collisioni */
+  position: relative; /* importante se hai un background video */
+  z-index: 1;
+  background-color: rgb(240, 240, 240); /* o metti un colore se serve */
+}
+
+.weapons-section h1 {
+  font-size: 48px;
   text-align: center;
-}
-
-.weapons-header {
-  margin-bottom: 20px;
-}
-
-.weapons-title-block {
-  display: flex;
-  align-items: center;
-  justify-content: center; /* centrato tutto insieme */
-  gap: 20px;
-}
-
-.weapons-title-block h2{
-  font-size: 28px;
+  margin: 40px 0 40px;
+  color: #222;
   font-family: 'Marker Felt', fantasy;
-  font-weight: bold;
-  color: #fff;
-  letter-spacing: 2px;
 }
 
-.weapon-icons {
-  display: flex;
-  gap: 10px;
+
+.weapons-wrapper {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  background-color: rgb(240, 240, 240);
+  color: #000;
 }
 
-.weapon-icon-link img {
-  width: 40px;
-  height: 40px;
-  transition: transform 0.3s ease, filter 0.3s ease;
+.weapons-grid {
+  display: grid;
+  gap: 25px;
+  grid-template-columns: repeat(14, 1fr);
+  padding: 0 20px 0 20px;
 }
 
-.weapon-icon-link:hover img {
-  transform: scale(1.2);
-  filter: drop-shadow(0 0 10px gold);
-}
-
-.stats-title {
-  margin-bottom: 15px;
-  font-size: 22px;
-  font-weight: bold;
-  font-family: 'Marker Felt', fantasy;
-  color: #d4af37;
-  letter-spacing: 1px;
-}
-.stat-value {
-  font-size: 22px;
-  font-weight: bold;
-  color: #fff;
-  margin: 0 10px;
-  min-width: 20px;
-  text-align: center;
-  transition: transform 0.3s ease;
-}
-
-.stat-text{
-    width: 105px;
-    font-size: 22px;
-    font-weight: bold;
-    color: #fff;
-    margin: 0 10px;
-    text-align: center;
-    transition: transform 0.3s ease;
-}
-
-.weapon-item:hover .stat-value {
-  transform: scale(1.1);
-}
 .weapons-box {
-  border: 3px solid #d4af37;
-  border-radius: 20px;
-  padding: 20px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  background-color: rgba(0, 0, 0, 0.2);
-}
-
-.weapon-item {
-  display: flex;
   align-items: center;
-  gap: 15px;
-  justify-content: center;
 }
 
-.weapon-icon {
-  width: 40px;
-  height: 40px;
-  transition: transform 0.3s ease;
-}
-
-.weapon-img {
-  width: 120px;
+.weapons-box img {
+  width: 80px;
   height: auto;
-  transition: transform 0.3s ease;
   border-radius: 10px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.weapon-item:hover .weapon-icon,
-.weapon-item:hover .weapon-img {
-  transform: scale(1.1);
+.weapons-box img:hover {
+  transform: scale(1.15);
+  filter: drop-shadow(0 0 10px rgb(0, 247, 255))
+}
+
+.weapons-name {
+  margin-top: 10px;
+  font-size: 16px;
+  font-family: 'Marker Felt', fantasy;
+  color: #000;
+  letter-spacing: 1px;
+  text-align: center;
 }
 
 
 
-
-
-
-/*------------------------------ Sezione skin --------------------------*/
-h4 {
-    margin: 30px 0 30px 0;
-    text-align: center;
-    font-size: 30px;
-    font-family: 'Marker Felt', fantasy;
-}
-
-
-.skin-section {
-    padding-top: 1px; /* margine interno sopra per evitare collisioni */
-    position: relative; /* importante se hai un background video */
-    z-index: 1;
-    background-color: rgb(240, 240, 240); /* o metti un colore se serve */
-  }
-  
-  .skin-section h1 {
-    font-size: 48px;
-    text-align: center;
-    margin: 40px 0 20px;
-    color: #222;
-    font-family: 'Marker Felt', fantasy;
-  }
-  
-  
-  .skin-wrapper {
-    max-width: 1300px;
-    margin: 0 auto;
-    padding: 60px 20px;
-    background-color: rgb(240, 240, 240);
-    color: #000;
-  }
-  
-  .skin-grid {
-    display: grid;
-    gap: 25px;
-    grid-template-columns: repeat(8, 1fr); /* default: 8 colonne */
-    padding: 0 20px 0 20px;
-  }
-  
-  .skin-box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .skin-box img {
-    width: auto;
-    height: 150px;
-    border-radius: 10px;
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .skin-box img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
-    filter: drop-shadow(0 0 10px gold);
-  }
-  
-  .skin-name {
-    margin-top: 10px;
-    font-size: 16px;
-    font-family: 'Marker Felt', fantasy;
-    color: #f0f0f0;
-    letter-spacing: 1px;
-    text-align: center;
-  }
-
-
-
-/* Footer */
-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: #111;
-    color: white;
-    width: 100%;
-    box-sizing: border-box;
-  }
-  
-  .footer__left-img{
-    display: flex;
-    flex: 1; /* Fa in modo che il contenitore centrale occupi lo spazio disponibile */
-  }
-  .footer__left-img img {
-    height: 250px; /* Puoi regolare questa altezza in base alle tue esigenze */
-    width: auto;
-  }
-  
-  .footer__center-content {
-    position: relative;
-    bottom: 0;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Allinea gli elementi al centro orizzontalmente */
-    justify-content: center; /* Allinea gli elementi al centro verticalmente */
-  }
-  
-  .footer__text {
-    margin-bottom: 10px;
-  }
-  
-  .footer__icons {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin-top: 10px;
-  }
-  
-  .footer__icons img {
-    width: 30px;
-    height: 30px;
-    transition: transform 0.3s;
-  }
-  
-  .footer__icons img:hover {
-    transform: scale(1.2);
-    cursor: pointer;
-  }
-  
-  .footer__right-imgs {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end; /* Allinea a destra */
-    gap: 10px;
-    flex: 1; /* Assegna lo stesso spazio al blocco destro */
-  }
-  
-  .footer-right-imgs-top {
-    width: 320px; /* Modifica l'ampiezza della grande immagine come desideri */
-    height: auto;
-  }
-  
-  .footer__right-imgs-bottom {
-    display: flex;
-    gap: 10px; /* Spazio tra le due immagini piccole */
-  }
-  
-  .footer__right-imgs-bottom-1 img {
-    width: 250px; /* Imposta la larghezza delle immagini piccole */
-    height: auto;
-  }
-  
-  .footer__right-imgs-bottom-2 img {
-    width: 70px; /* Imposta la larghezza delle immagini piccole */
-    height: auto;
-  }
-
-
-
-
-  @media (max-width: 768px) {
+@media (max-width: 768px) {
 
     .video-container__top-menu {
       position: fixed;
@@ -817,34 +587,36 @@ footer {
     
     
     
-
-    
-    .characters-section h1 {
-      width: 100vw;
-      text-align: center;
+    .info-section__info-block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
-    
-    .back-button {
-      padding: 6px 10px;
-      gap: 6px;
-      top: 15%;
-      left: 3%;
-      transform: scale(0.9); /* Rimpicciolisce il bottone */
+    /* Modifica l'ordine degli elementi */
+    .info-section__info-block:nth-child(2) .info-section__info-text {
+      order: 1; /* Testo 2 va dopo l'immagine 1 */
     }
   
-    .arrow-icon {
-      width: 30px;
+    .info-section__info-block:nth-child(2) .info-section__info-image {
+      order: 2; /* Immagine 2 va dopo il testo 2 */
     }
   
-    .arrow-text {
-      font-size: 16px;
+    .info-section__info-block:nth-child(3) .info-section__info-text {
+      order: 3; /* Testo 3 rimane l'ultimo */
+    }
+  
+    .info-section__info-block:nth-child(3) .info-section__info-image {
+      order: 4; /* Immagine 3 rimane alla fine */
     }
     
     
     
     
     
-  }  
+    
+    
+    
+}  
     
   @media (max-width: 890px)  {
     footer {
@@ -862,7 +634,6 @@ footer {
         display: flex;
         justify-content: center;
         align-items: center;
-        text-align: center;
     }
     
       .footer__left-img img,
@@ -895,111 +666,85 @@ footer {
       }
     }
 
-
-
-
-
-
-
-
-
-
-
-@media (max-width: 1205px) {
-      .skin-grid {
-        grid-template-columns: repeat(7, 1fr);
-      }
+@media (max-width: 630px) {
+    .video-container {
+        position: relative;
+        width: 100%;
+        height: 100vw;
+        overflow: hidden;
     }
-    
-@media (max-width: 1055px) {
-      .skin-grid {
-        grid-template-columns: repeat(6, 1fr);
-      }
+    .video-container-img {
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        height: 100vw;
+        object-fit: cover;
     }
-    
-@media (max-width: 910px) {
-      .skin-grid {
-        grid-template-columns: repeat(5, 1fr);
-      }
-    }
-
-@media (max-width: 770px) {
-      .skin-grid {
-        grid-template-columns: repeat(4, 1fr);
-      }
-    }
-@media (max-width: 640px) {
-      .skin-grid {
-        grid-template-columns: repeat(3, 1fr);
-      }
-    }
-@media (max-width: 485px) {
-      .skin-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-@media (max-width: 340px) {
-      .skin-grid {
-        grid-template-columns: repeat(1, 1fr);
-      }
-    }
-
-
-@media (max-width: 600px) {
-  .weapon-item {
-    flex-wrap: wrap;
-    width: 100%; /* Occupa tutta la larghezza del contenitore */
-    justify-content: center;
-  }
-
-  .stat-value,
-  .stat-text {
-    font-size: 18px; /* Rimpicciolisce le statistiche */
-    margin: 5px;
-  }
-
-  .weapon-icon,
-  .weapon-img {
-    width: 40px; /* Riduce dimensioni delle immagini */
-  }
-
-  .weapon-img {
-    border-radius: 8px;
-  }
 }
 
-
-
-
-@media (max-width: 1450px){
-      .maps-grid{
-        grid-template-columns: repeat(6, 1fr);
-      }
-    }
-@media (max-width: 1280px){
-      .maps-grid{
-        grid-template-columns: repeat(5, 1fr);
-      }
-    }
-@media (max-width: 1080px){
-      .maps-grid{
-        grid-template-columns: repeat(4, 1fr);
-      }
-    }
-
-@media (max-width: 900px){
-      .maps-grid{
-        grid-template-columns: repeat(3, 1fr);
-      }
-    }
-  
-@media (max-width: 730px){
-      .maps-grid{
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-  @media (max-width: 470px){
-      .maps-grid{
-        grid-template-columns: repeat(1, 1fr);
-      }
-    }
+@media (max-width: 1490px) {
+  .weapons-grid {
+    grid-template-columns: repeat(13, 1fr);
+  }
+}
+@media (max-width: 1395px) {
+  .weapons-grid {
+    grid-template-columns: repeat(12, 1fr);
+  }
+}
+@media (max-width: 1290px) {
+  .weapons-grid {
+    grid-template-columns: repeat(11, 1fr);
+  }
+}
+@media (max-width: 1185px) {
+  .weapons-grid {
+    grid-template-columns: repeat(10, 1fr);
+  }
+}
+@media (max-width: 1080px) {
+  .weapons-grid {
+    grid-template-columns: repeat(9, 1fr);
+  }
+}
+@media (max-width: 970px) {
+  .weapons-grid {
+    grid-template-columns: repeat(8, 1fr);
+  }
+}
+@media (max-width: 870px) {
+  .weapons-grid {
+    grid-template-columns: repeat(7, 1fr);
+  }
+}
+@media (max-width: 765px) {
+  .weapons-grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+@media (max-width: 660px) {
+  .weapons-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+@media (max-width: 555px) {
+  .weapons-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media (max-width: 450px) {
+  .weapons-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 345px) {
+  .weapons-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 240px) {
+  .weapons-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

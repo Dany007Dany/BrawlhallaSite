@@ -370,6 +370,7 @@ body {
   font-family: 'Marker Felt', fantasy;
   color: #fff;
   letter-spacing: 1px;
+  text-align: center;
 }
 
 .see-also-title {
@@ -436,6 +437,7 @@ body {
   font-family: 'Marker Felt', fantasy;
   color: #fff;
   letter-spacing: 1px;
+  text-align: center;
 }
 
 /* Footer */
