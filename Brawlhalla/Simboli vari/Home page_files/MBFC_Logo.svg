@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   sodipodi:docname="MBFC.svg"
+   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
+   id="svg8"
+   version="1.1"
+   viewBox="0 0 48.083999 48.083999"
+   height="48.084mm"
+   width="48.084mm">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     inkscape:window-maximized="1"
+     inkscape:window-y="-9"
+     inkscape:window-x="-9"
+     inkscape:window-height="1001"
+     inkscape:window-width="1920"
+     showgrid="false"
+     inkscape:document-rotation="0"
+     inkscape:current-layer="layer1"
+     inkscape:document-units="mm"
+     inkscape:cy="147.55831"
+     inkscape:cx="94.270706"
+     inkscape:zoom="2.8284271"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1"
+     inkscape:groupmode="layer"
+     inkscape:label="Layer 1">
+    <path
+       sodipodi:nodetypes="ccccscccccccccccccccccccccccccccccccccccccccccccccc"
+       d="m 28.286134,10.100333 c -0.01308,1e-4 -0.02617,2.73e-4 -0.03925,5.21e-4 l -8.451679,2e-6 v 10e-4 h -5.3e-4 c -0.01516,-9.7e-5 -0.03031,-9.4e-5 -0.04547,8e-6 -1.721798,0.02248 -3.104513,1.296532 -3.10419,2.860243 -1.5e-4,1.579706 1.410086,2.860354 3.149676,2.860249 0.01447,-8e-5 0.02894,-2.51e-4 0.04341,-5.13e-4 l 0.913121,-6e-6 1.590602,4.032775 -5.552119,-6e-6 2.862876,4.958802 -4.478794,0.666613 -0.434078,-0.752392 c -0.01398,-0.02533 -0.02828,-0.05048 -0.04289,-0.07545 -0.869849,-1.507256 -2.68415,-2.088879 -4.052472,-1.299128 -1.3684406,0.789995 -1.7724178,2.652525 -0.9022689,4.159895 0.00665,0.01124 0.013371,0.02244 0.020151,0.0336 l 4.2261019,7.3209 c 0.0081,0.01021 0.01677,0.02775 0.02374,0.03927 0.880317,1.480199 2.674847,2.040926 4.028694,1.258823 1.367907,-0.789727 1.77166,-2.651589 0.901755,-4.158341 -0.0073,-0.01245 -0.01473,-0.02485 -0.02221,-0.0372 l -0.456304,-0.790633 2.81688,-3.545474 2.758489,4.777938 2.758486,-4.777935 2.8174,3.547019 -0.434597,0.7524 c -0.01495,0.0248 -0.0296,0.04978 -0.04393,0.07494 -0.869878,1.507092 -0.466175,3.369185 0.901757,4.159379 1.368287,0.790222 3.182937,0.208791 4.052982,-1.298613 0.0064,-0.01133 0.01282,-0.0227 0.01913,-0.0341 l 4.2261,-7.320898 -0.0011,-5.14e-4 v -5.3e-4 c 0.0077,-0.01304 0.01524,-0.02613 0.02273,-0.03927 0.841535,-1.502668 0.429722,-3.337488 -0.924495,-4.119066 -1.367655,-0.7896 -3.181253,-0.208442 -4.050913,1.298093 -0.0073,0.0127 -0.01455,0.02545 -0.0217,0.03824 l -0.456305,0.790639 -4.479311,-0.667133 2.863906,-4.959833 -5.550542,-4e-6 1.591634,-4.032746 h 0.868679 c 0.02894,5.38e-4 0.05788,7.15e-4 0.08682,5.29e-4 1.739922,-2.1e-5 3.150463,-1.280758 3.150708,-2.860765 7.8e-5,-1.580213 -1.410556,-2.861273 -3.150705,-2.861296 z"
+       style="fill:#9cfd84;fill-opacity:1;stroke:#000000;stroke-width:0.3;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect861" />
+    <path
+       id="path902"
+       d="M 24.041022,0.15000001 C 10.878732,0.15000206 0.14999893,10.879175 0.15000001,24.042001 0.14999894,37.204833 10.87873,47.934003 24.041024,47.933999 37.203314,47.934002 47.933998,37.204835 47.934,24.041998 47.934001,10.879173 37.203315,0.15000126 24.041022,0.15000001 Z m -1e-6,5.50031799 c 10.189822,-1e-7 18.392888,8.201449 18.392884,18.391682 3e-6,10.190239 -8.20306,18.391686 -18.392883,18.391686 -10.189823,-2e-6 -18.3909278,-8.201445 -18.390932,-18.391685 9e-7,-10.190233 8.201106,-18.3916854 18.390931,-18.391683 z"
+       style="color:#000000;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:0.996;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:#9cfd84;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.3;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;shape-rendering:auto;enable-background:accumulate;stop-color:#000000;stop-opacity:1" />
+  </g>
+</svg><!--
+
+
+This file was rendered for and uploaded to brawlhalla.gamepedia.com by User:Diriector_Doc_1
+
+
+-->
