@@ -94,12 +94,126 @@
     
   </div>
   </div>
+
+  
+
+
+
+<!--------------------------------- Sezione Informativa ------------------------------------------>
+<section class="weapons-info">
+  <h2>Weapon Mechanics</h2>
+  <p class="weapons-info__p">In Brawlhalla, weapon management plays a crucial role in combat. Learn how to pick up, attack, throw, and even lose your weapon strategically!</p>
     
+    <div class="weapon-details">
+<!-- SEZIONE ATTACKING -->
+      <div class="weapon-details__box">
+        <h3>Picking Up</h3>
+        <p>Weapons appear as <strong>flaming swords of light</strong> at semi-random intervals in specific areas of the map. When a Legend interacts with them, they transform into usable weapons.</p>
+
+        <p><strong>Spawn mechanics:</strong></p>
+        <ul>
+            <li><strong>1v1 Mode:</strong> The first weapon pickup spawns at the center of the map.</li>
+            <li><strong>2v2 Mode:</strong> A pickup spawns on each side of the map.</li>
+            <li><strong>Other Modes:</strong> Pickups appear randomly within designated spawn areas.</li>
+        </ul>
+
+        <p>Weapon pickups alternate, ensuring that each new pickup is different from the last one collected.</p>
+
+        <p><strong>Weapon lifespan:</strong></p>
+        <ul>
+            <li>Untouched pickups remain on stage for a limited time.</li>
+            <li>Weapons flash for <strong>2.5 seconds</strong> before disappearing.</li>
+            <li>Weapons vanish after <strong>30 seconds</strong>, while most Gadgets disappear within <strong>15 seconds</strong>.</li>
+        </ul>
+
+        <p>Using the <strong>Sidekick Summoner</strong> allows a Legend to summon a weapon pickup directly to their location, providing a tactical advantage.</p>
+      </div>
+
+      
+      
+<!-- SEZIONE ATTACKING -->
+      <div class="weapon-details__box">
+          <h3>Attacking</h3>
+          <p>Each weapon in Brawlhalla has a unique moveset, allowing for diverse playstyles and strategies. Attacks are divided into different categories:</p>
+
+          <ul>
+              <li><strong>Ground Light Attacks (GLA):</strong> Fast and versatile attacks used for initiating combos.</li>
+              <li><strong>Aerial Light Attacks (ALA):</strong> Quick airborne strikes that help control space and extend combos.</li>
+              <li><strong>Ground Heavy Attacks (GHA):</strong> Powerful moves that deal significant damage and knockback.</li>
+              <li><strong>Aerial Heavy Attacks (AHA):</strong> Strong airborne attacks used for finishing opponents.</li>
+          </ul>
+
+          <p>Each Legend has <strong>Signature Moves</strong> (Sigs), which are unique heavy attacks tied to their weapons. These moves define a Legend’s playstyle and provide distinct advantages.</p>
+
+          <p>Additionally, weapons have different attack properties:</p>
+          <ul>
+              <li><strong>True Combos:</strong> Guaranteed sequences of attacks that cannot be escaped.</li>
+              <li><strong>Strings:</strong> Flexible attack chains that allow for creative follow-ups.</li>
+              <li><strong>Active Input:</strong> Some weapons, like Scythe and Battle Boots, allow directional control over certain attacks.</li>
+          </ul>
+
+          <p>Mastering attack timing, spacing, and movement is crucial for dominating battles. Each weapon has strengths and weaknesses, making adaptability key to success.</p>
+      </div>
+
+      
+      
+<!-- SEZIONE THROWING -->
+      <div class="weapon-details__box">
+          <h3>Throwing</h3>
+          <p>Weapons can be thrown in combat using the <strong>Throw action</strong>, similar to Gadgets. Each weapon has a unique hitbox size, and throws can be <strong>charged</strong> to increase speed, knockback, and damage.</p>
+      
+          <p>Most weapons have the same throw speed, except:</p>
+          <ul>
+              <li><strong>Hammer:</strong> 0.85x normal speed</li>
+              <li><strong>Spear:</strong> 1.1x normal speed</li>
+          </ul>
+      
+          <p>Thrown weapons bounce off surfaces but stop dealing damage after losing enough velocity—usually within two bounces.</p>
+      
+          <p>Once a weapon lands on stage (stops spinning), it begins disappearing:</p>
+          <ul>
+              <li>Can be picked up again by the thrower for <strong>11 frames</strong></li>
+              <li>Disappears completely after <strong>10 additional frames</strong></li>
+          </ul>
+      
+          <p><strong>Thrown weapons cannot be picked up by another Legend, even if they share the same weapon.</strong></p>
+      
+          <p>In case of a <strong>throw clash</strong>, a thrown weapon passes through enemies if the thrower was stunned within the last <strong>25 frames</strong>.</p>
+      </div>
     
+<!-- SEZIONE LOSING YOUR WEAPON -->
+      <div class="weapon-details__box">
+          <h3>Losing your weapon</h3>
+          <p>Legends can lose their weapon when they take enough damage or are hit by a strong attack. The disarm threshold is determined by:</p>
+      
+          <ul>
+              <li><strong>Total damage taken:</strong> The more damage a Legend accumulates while holding a weapon, the higher the chance of disarming.</li>
+              <li><strong>Incoming attack force:</strong> Stronger attacks increase the likelihood of losing the weapon, especially when a Legend’s health reaches red.</li>
+          </ul>
+      
+          <p>Once disarmed, a Legend must pick up another weapon or gadget to reset their damage threshold.</p>
+      
+          <p>Additional mechanics:</p>
+          <ul>
+              <li><strong>Weapon retention:</strong> If a Legend throws their weapon before being hit, they avoid disarming.</li>
+              <li><strong>Weapon denial:</strong> Opponents can control weapon spawns to limit a disarmed Legend’s options.</li>
+              <li><strong>Recovery strategies:</strong> Using unarmed attacks effectively can help regain control until a new weapon is picked up.</li>
+          </ul>
+      
+          <p>Mastering disarming mechanics allows for strategic plays, whether forcing opponents to lose their weapon or recovering quickly after being disarmed.</p>
+      </div>
     
-<!--------------------------------- Sezione Personaggi ------------------------------------------>
+    </div>
+</section>
+
+
+    
+
+
+
+<!--------------------------------- Sezione Armi ------------------------------------------>
 <section class="weapons-section" id="weapons-section">
-    <h1>SO MANY WEAPONS!</h1>
+    <h1>WEAPONS: GEAR UP FOR BATTLE!</h1>
   
     <div class="weapons-grid">
       <!-- Riga 1 -->
@@ -192,7 +306,68 @@
       
     </div>
 </section>
+ 
+
+
+<!------------------------- SEIONE GADGET ------------------------------>
+<section class="gadgets-section" id="gadgets-section">
+  <h1>GADGETS: SMALL TOOLS, BIG CHAOS!</h1>
+
+  <div class="gadgets-grid">
+    <!-- Riga 1 -->
+    <div class="gadgets-box">
+      <a href="gadgets-bomb.html">
+        <img src="../Brawlhalla/Gadgets/Gadget_Bomb.png" alt="Bomb">
+      </a>
+      <p class="gadgets-name">Bomb</p>
+    </div>
+
+    <div class="gadgets-box">
+      <a href="gadgets-spike.html">
+        <img src="../Brawlhalla/Gadgets/Gadget_Spike.png" alt="Spike">
+      </a>
+      <p class="gadgets-name">Spike</p>
+    </div>
+
+    <div class="gadgets-box">
+      <a href="gadgets-mine.html">
+        <img src="../Brawlhalla/Gadgets/Gadget_Mine.png" alt="Mine">
+      </a>
+      <p class="gadgets-name">Mine</p>
+    </div>
+    
+    <div class="gadgets-box">
+      <a href="gadgets-horn.html">
+        <img src="../Brawlhalla/Gadgets/Gadget_Horn.png" alt="Horn">
+      </a>
+      <p class="gadgets-name">Horn</p>
+    </div>
+
+    <div class="gadgets-box">
+      <a href="gadgets-boomerang.html">
+        <img src="../Brawlhalla/Gadgets/Gadget_Boomerang.png" alt="Boomerang">
+      </a>
+      <p class="gadgets-name">Boomerang</p>
+    </div>
+
+    <div class="gadgets-box">
+      <a href="gadgets-sticky_bomb.html">
+        <img src="../Brawlhalla/Gadgets/Gadget_Sticky_Bomb.png" alt="Sticky Bomb">
+      </a>
+      <p class="gadgets-name">Sticky Bomb</p>
+    </div>
+
+    <div class="gadgets-box">
+      <a href="gadgets-bubble_bomb.html">
+        <img src="../Brawlhalla/Gadgets/Gadget_Bubble_Bomb.png" alt="Bubble Bomb">
+      </a>
+      <p class="gadgets-name">Bubble Bomb</p>
+    </div>
+
   
+    
+  </div>
+</section>
 
   <!-- Footer -->
   <footer>

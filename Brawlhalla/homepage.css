@@ -63,6 +63,7 @@ body {
 
 .info-section h2 {
     text-align: center;
+    margin-top: 0;
     margin-bottom: 40px;
     font-size: 32px;
     color: #007acc;
@@ -95,6 +96,7 @@ body {
 .info-section__info-image {
     flex: 1 1 300px;
     max-width: 500px;
+    height: auto;
     text-align: center;
 }
 
@@ -115,13 +117,13 @@ body {
 
 
 .lore-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem;
-  background: linear-gradient(to right, #002980, #88a5a8); /* blu molto scuro */
-  color: #e2e8f0; /* testo chiaro e freddo */
-  border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7);
+  max-width: 80%; /* larghezza massima proporzionale */
+  margin: 5vh auto; /* margini verticali proporzionali alla viewport */
+  padding: 3vw; /* padding interno proporzionale */
+  background: linear-gradient(to right, #002980, #88a5a8);
+  color: #e2e8f0;
+  border-radius: 1vw;
+  box-shadow: 0 1vh 2.5vh rgba(0, 0, 0, 0.7);
   font-family: 'Marker Felt', fantasy;
 }
 
@@ -148,8 +150,8 @@ body {
 }
 
 .lore-box {
-  background: rgb(183, 227, 255, 0.3); /* blu/grigio scuro opaco */
-  border-left: 5px solid white; /* grigio freddo più chiaro */
+  background: linear-gradient(to right, rgb(0, 0, 0), #002f94); /* blu/grigio scuro opaco */
+  border-left: 5px solid #60a5fa; /* grigio freddo più chiaro */
   padding: 1.5rem;
   border-radius: 8px;
   transition: transform 0.2s ease;
@@ -158,8 +160,9 @@ body {
 }
 
 .lore-box:hover {
+  background: linear-gradient(to right, grey, #002980);
   transform: scale(1.03);
-  border-left-color: #60a5fa; /* blu chiaro in hover */
+  border-left-color: white; /* blu chiaro in hover */
 }
 
 .lore-box h2 {
@@ -381,6 +384,7 @@ footer {
     padding: 10px 30px;
     background: transparent;
     box-shadow: none;
+    
 }
 
 
@@ -390,6 +394,7 @@ footer {
     top: 25px;
     display: flex;
     gap: 10px;
+    list-style: none;
 }
 
 .video-container__top-menu li a {

@@ -21,29 +21,43 @@ body {
   }
   
   .saga h1 {
+    margin-top: 0;
     text-align: center;
     font-size: 50px;
     color: #ffd700;
     text-shadow: 2px 2px 5px #000;
+    font-family: 'Marker Felt', fantasy;
   }
 
   .saga h2, .saga h3 {
     text-align: center;
     color: #ffd700;
     text-shadow: 2px 2px 5px #000;
+    font-family: 'Marker Felt', fantasy;
   }
   
   .saga h2 {
     font-size: 2em;
     margin-bottom: 10px;
+    font-family: 'Marker Felt', fantasy;
   }
   
   .saga h3 {
     font-size: 1.4em;
     margin-bottom: 20px;
     font-style: italic;
+    font-family: 'Marker Felt', fantasy;
   }
   
+  .saga p {
+    text-align: center;
+    font-family: 'Marker Felt', fantasy;
+  }
+
+  .saga li {
+    font-family: 'Marker Felt', fantasy;
+  }
+
   .saga blockquote {
     border-left: 4px solid #d4af37;
     margin: 20px 0;
@@ -66,7 +80,6 @@ body {
   em {
     color: #ccc;
   }
-
   /* Contenitore video + immagini */
 .video-container {
     position: relative;
@@ -199,23 +212,23 @@ body {
 
 
 .video-container__play-now {
-    position: fixed;
-    top: 0;
-    right: 100px;
-    z-index: 1001;
-    transform: translateY(-15%);
+  position: fixed;
+  top: 0;
+  right: 100px;
+  z-index: 1001;
+  transform: translateY(-15%);
 }
 
 .video-container__play-now-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    text-decoration: none;
-    position: relative;
-    cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  text-decoration: none;
+  position: relative;
+  cursor: pointer;
 }
 
 .video-container__play-now-button:hover {
@@ -223,54 +236,53 @@ body {
 }
 
 .video-container__play-now-icon {
-    width: auto;
-    height: 60%;
+  width: auto;
+  height: 60%;
 }
 
 .video-container__play-now-text {
-    position: absolute;
-    color: white;
-    text-align: center;
-    display: flex;
-    gap: 10px;
-    width: 115%
+  position: absolute;
+  color: white;
+  text-align: center;
+  display: flex;
+  gap: 10px;
+  width: 115%
 
 }
 
 .video-container__play-now-text span {
-    font-family: 'Marker Felt', fantasy;
-    font-weight: 400;
-    font-size: 25px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: black;
-    text-shadow: 0 0 20px #000, 0 0 20px black;
-    background: linear-gradient(90deg, black, black);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  font-family: 'Marker Felt', fantasy;
+  font-weight: 400;
+  font-size: 25px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: white;
+  background: linear-gradient(90deg, black, black);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .video-container__play-now:hover .video-container__play-now-text span {
-    animation: pulse 1.5s infinite;
-  }
-  
+  animation: pulse 1.5s infinite;
+}
+
 
 .video-container__play-now-text span:hover {
-    animation: none;
-  }
-  
+  animation: none;
+}
+
 
 @keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.08); }
-    100% { transform: scale(1); }
-  }
+  0% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
 
 
 
 /* Il checkbox è invisibile, ma ne controlla lo stato */
 .video-container__play-now-checkbox {
-    display: none;
+  display: none;
 }
 
 /* Menu a tendina */
