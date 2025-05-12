@@ -556,62 +556,60 @@ footer {
 }
 
 .weapon-details {
-  display: flex;
+  display: grid;
   justify-content: center;
+  align-items: stretch;
   gap: 20px;
-  flex-wrap: wrap;
+  grid-template-columns: repeat(4, 1fr);
+  max-width: 1200px;
+  margin: auto;
 }
 
 .weapon-details__box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch; /* Altezza uguale */
   padding: 20px;
   border-radius: 8px;
-  max-width: 300px;
-  text-align: left;
+  text-align: center;
   color: black;
   background: linear-gradient(135deg, #0088cc, #36ade8, #00f7ff);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  min-height: 250px; /* Altezza minima uguale */
 }
 
 .weapon-details__box h3 {
   font-size: 1.8rem;
   font-family: 'Marker Felt', fantasy;
   margin-bottom: 10px;
-  color: #f0b90b; /* Titoli arancioni mantenuti */
-  text-align: center;
+  color: #f0b90b;
 }
 
-.weapon-details__box p {
+.weapon-details__box p,
+.weapon-details__box ul {
   font-size: 1rem;
   line-height: 1.5;
   font-family: 'Marker Felt', fantasy;
-  text-align: center;
 }
 
 .weapon-details__box ul {
-  text-align: left;
-  padding-left: 20px;
-  font-family: 'Marker Felt', fantasy;
-  text-align: center;
+  padding-left: 0;
 }
 
 .weapon-details__box ul li {
-  list-style-type: disc;
+  list-style-type: none;
   margin-bottom: 5px;
-  text-align: center;
-  font-family: 'Marker Felt', fantasy;
 }
 
 strong {
-  color: #f0b90b
+  color: #f0b90b;
 }
 
 .weapon-details__box:hover {
   background: linear-gradient(135deg, #00f7ff, #36ade8, #0088cc);
   transform: scale(1.03);
-  border-left-color: white; /* blu chiaro in hover */
 }
-
-
 
 
 
@@ -834,6 +832,22 @@ strong {
         object-fit: cover;
     }
 }
+
+
+
+/* Media Queries */
+@media (max-width: 1500px) {
+  .weapon-details {
+    grid-template-columns: repeat(2, 1fr); /* 2 colonne sopra e 2 sotto */
+  }
+}
+
+@media (max-width: 750px) {
+  .weapon-details {
+    grid-template-columns: repeat(1, 1fr); /* Singola colonna */
+  }
+}
+
 
 @media (max-width: 1490px) {
   .weapons-grid {
