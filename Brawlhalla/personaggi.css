@@ -191,7 +191,7 @@ body {
 
 .maps-grid {
   display: grid;
-  gap: 0px;
+  gap: 25px;
   grid-template-columns: repeat(7, 1fr); /* default: 8 colonne */
   padding: 0 20px 0 20px;
 }
@@ -773,7 +773,7 @@ footer {
 
 
 
-@media (max-width: 1030px) {
+@media (max-width: 1090px) {
       .characters-grid {
         grid-template-columns: repeat(7, 1fr);
       }
@@ -818,34 +818,34 @@ footer {
 
 
 
-@media (max-width: 1450px){
+@media (max-width: 1610px){
       .maps-grid{
         grid-template-columns: repeat(6, 1fr);
       }
     }
-@media (max-width: 1280px){
+@media (max-width: 1380px){
       .maps-grid{
         grid-template-columns: repeat(5, 1fr);
       }
     }
-@media (max-width: 1080px){
+@media (max-width: 1155px){
       .maps-grid{
         grid-template-columns: repeat(4, 1fr);
       }
     }
 
-@media (max-width: 900px){
+@media (max-width: 930px){
       .maps-grid{
         grid-template-columns: repeat(3, 1fr);
       }
     }
   
-@media (max-width: 730px){
+@media (max-width: 705px){
       .maps-grid{
         grid-template-columns: repeat(2, 1fr);
       }
     }
-  @media (max-width: 470px){
+  @media (max-width: 480px){
       .maps-grid{
         grid-template-columns: repeat(1, 1fr);
       }
