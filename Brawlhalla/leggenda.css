@@ -598,15 +598,18 @@ h4 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: stretch;
   }
   
   .skin-box img {
     width: 120px;
-    height: auto;
+    height: 160px;
+    object-fit: contain;
+    background-color: transparent; /* opzionale, per riempire i bordi vuoti */
     border-radius: 10px;
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
+}
   
   .skin-box img:hover {
     transform: scale(1.05);
